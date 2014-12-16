@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # PlazaPodemos, Creacion de multiples sub-reddits a partir de lista desde archivo
-# soportevotaciones@podemos.info
+# Crea los subs como privados
 # Aritza, 16/10/2014
 # -*- coding: utf-8 -*-
 
@@ -46,6 +46,7 @@ print('Podemos!')
 
 r = praw.Reddit(user_agent='FlairBotPodemos')
 r.login( adminUser, adminPass )
+r.config.decode_html_entities = True
 
 with open(fLista) as f:
 	lista = f.read().splitlines()
