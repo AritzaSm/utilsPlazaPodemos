@@ -117,7 +117,9 @@ for w in lista:
 					
 			if actualizarBarra : 
 				print 'Actualizando Barra Lateral'
-				r.update_settings (r.get_subreddit(subreddit), description=nuevoLateral)
+				lateralPersonalizado = nuevoLateral
+				lateralPersonalizado.replace ('/r/ClaroQuePodemos','/r/'+ subreddit )
+				r.update_settings (r.get_subreddit(subreddit), description=lateralPersonalizado)
 					
 			numOk = numOk +1		
 	except praw.errors.RateLimitExceeded as error:
