@@ -116,10 +116,10 @@ for w in lista:
 				r.set_stylesheet(subreddit, estilo)
 					
 			if actualizarBarra : 
-				print 'Actualizando Barra Lateral'
-				lateralPersonalizado = nuevoLateral
-				lateralPersonalizado.replace ('/r/ClaroQuePodemos','/r/'+ subreddit )
-				r.update_settings (r.get_subreddit(subreddit), description=lateralPersonalizado)
+				print 'Actualizando y personalizando la Barra Lateral'
+				nuevoLateral = nuevoLateral.replace('/r/ClaroQuePodemos','/r/'+ subreddit )
+				nuevoLateral = nuevoLateral.replace( '/r/'+subreddit+'/search?q=flair%3A%27Lemas31E%27','/r/podemos/search?q=flair%3A%27Lemas31E%27')
+				r.update_settings (r.get_subreddit(subreddit), description=nuevoLateral)
 					
 			numOk = numOk +1		
 	except praw.errors.RateLimitExceeded as error:
