@@ -18,6 +18,7 @@ adminPass = ''
 
 # Definiciones para el arichivo 
 fLista = 'comunidades.txt'
+#fLista = 'pruebas.txt'
 lista = []
 subOrig = 'ClaroQuePodemos'
 imgDir ='images/'
@@ -45,7 +46,7 @@ with open(fLista) as f:
 
 	estilo = r.get_stylesheet(subOrig)['stylesheet']
 	barraLateral = r.get_settings(subOrig)
-	nuevoLateral = barraLateral['description']
+	lateralOrig = barraLateral['description']
 	images = r.get_stylesheet(subOrig)['images']
 
 # Un par de funciones para tratar la cache de imagenes
@@ -117,9 +118,10 @@ for w in lista:
 					
 			if actualizarBarra : 
 				print 'Actualizando y personalizando la Barra Lateral'
-				nuevoLateral = nuevoLateral.replace('/r/ClaroQuePodemos','/r/'+ subreddit )
-				nuevoLateral = nuevoLateral.replace( '/r/'+subreddit+'/search?q=flair%3A%27Lemas31E%27','/r/podemos/search?q=flair%3A%27Lemas31E%27')
-				r.update_settings (r.get_subreddit(subreddit), description=nuevoLateral)
+				lateralPerso = lateralOrig
+				lateralPerso = lateralPerso.replace('/r/ClaroQuePodemos','/r/'+ subreddit )
+				lateralPerso = lateralPerso.replace( '[Lemas31E]('+'/r/'+subreddit+'/search?q=flair%3A%27Lemas31E%27&restrict_sr=on&sort=top&t=all)','[PlazaPodemos](/r/podemos)')
+				r.update_settings (r.get_subreddit(subreddit), description=lateralPerso)
 					
 			numOk = numOk +1		
 	except praw.errors.RateLimitExceeded as error:
