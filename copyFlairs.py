@@ -1,7 +1,7 @@
 #!/usr/bin/python
- # PlazaPodemos, copia asignaciones de etiquetas a plazas 
- # Hay que editar los valores iniciales para que los use en la asignacion
- # Aritza.
+# PlazaPodemos, copia asignaciones de etiquetas a plazas 
+# Hay que editar los valores iniciales para que los use en la asignacion
+# Aritza.
 
 import praw
 import time
