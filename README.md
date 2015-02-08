@@ -16,18 +16,18 @@ Copia el estilo Css de una plaza origen a una destino.
 
 ## copyFlair.py
 
-Copya las etiquetas de los usuarios, especificas una etiqueta y añade los usuarios que la tengan. Está pensada para los circulos y miembros del consejo ciudadano
+Copia las etiquetas de los usuarios, especificas una etiqueta y añade los usuarios que la tengan. Está pensada para los circulos y miembros del consejo ciudadano
 
 
 -- obsoletas --
-## plazaBulkFlair : 
+### plazaBulkFlair.py : 
 Asigna las etiquetas a los candidatas/os a los diferentes organos de podemos.
 Lee las nombres de usuario de reddit de dos archivos y les va asignado la etiqueta que les corresponde.
 
-## plazaBulkCreate : 
+### plazaBulkCreate.py : 
 Crea varios subs siguiendo patrones establecidos. 
 
-## utilscssB :
+### utilscssB.py :
 Version beta de un conjunto de utilidades para clonar estilos de un subreddit
 
 
